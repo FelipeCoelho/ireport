@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="previaReembolsoSub" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ab268401-4969-4cf7-b39f-a90c04943df9">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cdItem" class="java.lang.String"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="quantidade" class="java.lang.Integer"/>
+	<field name="valorInformado" class="java.math.BigDecimal"/>
+	<field name="valorReembolsavel" class="java.math.BigDecimal"/>
+	<variable name="somaValorInformado" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="15" width="55" height="15" uuid="0494bcde-7db2-4734-9d17-97399fd92b69"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cód.Proc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="15" width="60" height="15" uuid="eebd92c1-2af6-4fb5-8ed3-0e0101a1b620"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="0" width="78" height="28" uuid="75a3f8e3-03eb-4c92-b083-84c59f51b305"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Reembolsável]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="13" width="19" height="15" uuid="e2884ec5-e8ad-4c14-b253-c65eee2ec678"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="0" width="55" height="28" uuid="bc1bb713-585d-4b58-8236-a5eb9d880069"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Informado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="32" width="60" height="1" uuid="0699dd26-1231-4602-8d5a-33a25acae938"/>
+			</line>
+			<line>
+				<reportElement x="70" y="32" width="320" height="1" uuid="ad100394-cdd5-4227-a574-c741a10696a1"/>
+			</line>
+			<line>
+				<reportElement x="400" y="32" width="43" height="1" uuid="a969c7a3-2ac3-4b76-8074-3175680f3a32"/>
+			</line>
+			<line>
+				<reportElement x="449" y="32" width="55" height="1" uuid="7d1e53c5-4d21-4e1d-a99a-cbe4cc335430"/>
+			</line>
+			<line>
+				<reportElement x="512" y="32" width="78" height="1" uuid="af037b3a-d29c-42fe-961e-9e1679a4ba7d"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="0" width="320" height="15" uuid="1f43e016-28d1-4625-8aa6-466230592270">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae751e53-4a33-4e46-a68e-9983101f3575"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="43" height="15" uuid="acb7b534-6021-4e0e-9080-129c9e74d57b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e0926af-9a7f-4675-8e65-66d4a4e5dc24"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###.###.###,##">
+				<reportElement x="449" y="0" width="55" height="15" uuid="ae787812-4e8d-4c5f-a331-779b4679c677">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="626a8a1d-0582-48df-8888-dc63d036fc7c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{valorInformado}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###.###.###,##">
+				<reportElement x="512" y="0" width="78" height="15" uuid="43bd6c49-a10e-4340-8ad3-c4964463eb55">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba0fdad7-d9ca-4129-96cb-15ff33971cce"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{valorReembolsavel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="60" height="15" uuid="79e071b7-c184-4ea5-88e0-d0ab1a231068">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c49d6806-c447-47ed-9b5c-7684d5586e81"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cdItem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

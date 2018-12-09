@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cliente" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cdf4b18c-3c48-469d-b1fa-4f5ab6878e7e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="listaTelefone" class="java.util.List"/>
+	<parameter name="SUB_RELATORIO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["C:\\Users\\Felipe Coelho\\workspace\\ireport\\src\\main\\resources\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idade" class="java.lang.Integer"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="endereco" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="be6f3842-13ab-422a-91a5-b575193fdff4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41c5a8a1-4457-4fec-9f34-788575e6f614"/>
+				</reportElement>
+				<text><![CDATA[idade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="c7fd4d47-871d-4545-a07d-4cb507c6a67f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="44f4a76f-e84d-4fc5-b754-3620c37d198c"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="24403517-c5c3-4a10-a38f-ecc513f65a54">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66c873d9-c5c0-46f5-8ede-be4cb219d27d"/>
+				</reportElement>
+				<text><![CDATA[endereço]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="0723e949-b256-4ff6-984c-b4bc869b6fb7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41c5a8a1-4457-4fec-9f34-788575e6f614"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="4742cfb7-99c7-457e-b844-906798689503">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="44f4a76f-e84d-4fc5-b754-3620c37d198c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="69e41335-b57c-42e8-a124-3144a9ce8111">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66c873d9-c5c0-46f5-8ede-be4cb219d27d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="310" y="0" width="240" height="30" uuid="59e7ccb5-8d30-48aa-bb33-f4d0843face5"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{listaTelefone})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUB_RELATORIO}+"clienteSub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="previaReembolso" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a20fc495-608d-40d5-945e-2d71e728a2da">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="data" class="java.lang.String"/>
+	<parameter name="PREVIA_REEMBOLSO_SUB" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="GAMA_SAUDE_LTDA" class="java.lang.String"/>
+	<parameter name="listaItemPrevia" class="java.util.List"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numRbl" class="java.lang.Long"/>
+	<field name="numeroCarteira" class="java.lang.String"/>
+	<field name="nomeTitular" class="java.lang.String"/>
+	<field name="nomeEstipulante" class="java.lang.String"/>
+	<field name="nomeSubEstipulante" class="java.lang.String"/>
+	<field name="plano" class="java.lang.String"/>
+	<field name="rede" class="java.lang.String"/>
+	<field name="dataSolicitacao" class="java.time.LocalDateTime"/>
+	<field name="protocolo" class="java.lang.String"/>
+	<field name="nomeBeneficiario" class="java.lang.String"/>
+	<field name="numeroCarteiraTitular" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="50" uuid="709c77fe-7d6b-4c82-956d-959403d571df"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="450" y="20" width="25" height="30" uuid="173dfae4-be3c-496b-b5a5-896d880cd1ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Nº:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="11" width="230" height="30" uuid="541fb20a-7336-4517-b533-a56621e73d7a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRÉVIA DE REEMBOLSO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="475" y="20" width="72" height="28" uuid="4ecc41ae-fce7-43d6-a23f-60e88395f746"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numRbl}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="14" y="4" width="116" height="41" uuid="8edeb98f-06fd-4082-a650-0ad2e51e3001"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="500" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="25" width="82" height="15" uuid="78106389-52a3-4994-8ff8-e0251e211fb0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Data Solicitação:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="133" width="110" height="15" uuid="d284745c-ef3f-4980-9e88-aa5de05da41f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prezado Segurado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="555" height="30" uuid="a3233587-c885-49e7-8deb-6f9df9a479e9"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[Conforme documentos encaminhados a esta Operadora, após análise técnica-médica, e em conformidade com as cláusulas de reembolso no contrato vigente, temos a expor o que segue:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="270" width="40" height="18" uuid="78c01180-fa32-4be8-b255-96355e40fe7b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTAS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="270" width="12" height="18" uuid="ee429e4d-6dd5-4290-a80e-e027ed495a4a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="316" width="12" height="18" uuid="50c4272a-cb59-4b29-a9be-4d43c78d0506"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[B)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="400" width="12" height="18" uuid="14d7ce89-9a41-4930-9996-bc3c8d9a6de4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[C)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="270" width="495" height="39" uuid="95fee7af-471f-44d3-93fb-e4f0ce2983b1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[O valor acima deve ser considerado como um demonstrativo prévio de valores reembolsáveis e poderá sofrer alterações caso a documentação /recibos apresentados por ocasião da análise de reembolso apresente divergência (ou diferença) ao aqui descrito.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="316" width="495" height="26" uuid="c7cf7c80-c67b-43a2-ac77-177c8b97dce5"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Deverão ser respeitadas todas as regras e condições referentes ao preenchimento de recibos e demais exigências conforme o Manual do Segurado, como exemplos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="343" width="485" height="26" uuid="f5143e41-865d-4f3f-abcf-2f0ace81e44c"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[b.1 - em reembolsos de biópsias ou retirada de órgãos, deverão obrigatoriamente ser encaminhados os exames anátomo-patológicos das peças ou fragmentos,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="369" width="485" height="26" uuid="ccac50a6-335f-413c-9315-1ad76f5d6b21"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[b.2 - os recibos e relatórios médicos deverão vir sempre datados, com assinatura e carimbo dos médicos envolvidos nos procedimentos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="400" width="495" height="26" uuid="faabf846-0c47-42d6-abf1-f4eb37338ad3"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[É obrigatório o envio para Seguradora de cópia desta prévia juntamente com os recibos e documentos que farão parte do processo de rembolso.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="191" width="52" height="18" uuid="834fb57c-4d8f-45c8-8cc1-bf9b99e7624e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Conselho:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="10" width="94" height="15" uuid="f328c178-8418-4821-9148-0ed40837a9c5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{protocolo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="50" height="15" uuid="473fd4e3-9af4-42c3-9c4f-f4918be64d34"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocolo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="40" width="124" height="15" uuid="35558f04-9d21-4626-b6f5-e3fef5a39fd8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroCarteira}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="60" height="15" uuid="11ebf7c2-9bb8-4b4b-87dc-9f5bd5469401"/>
+				<text><![CDATA[Beneficiario:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="55" width="280" height="15" uuid="20e277bf-01f8-4d4a-9138-704684639be6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeTitular}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="55" width="40" height="15" uuid="9259c926-a647-4b61-adee-fafa6ca0dd01"/>
+				<text><![CDATA[Titular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="70" width="414" height="15" uuid="372dd0c5-21c6-48e0-a369-aba962b29ab5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeEstipulante}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="100" height="15" uuid="011be0cc-4e8a-41cd-affb-885ed233dba2"/>
+				<text><![CDATA[Estipulante/Empresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="85" width="414" height="15" uuid="b012c44d-2e7c-4d2e-ab4f-8cb4e3bc8b5c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeSubEstipulante}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="85" width="82" height="15" uuid="5480f7f3-4e58-43d5-a03d-f975d4d28f05"/>
+				<text><![CDATA[SubEstipulante:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="100" width="164" height="15" uuid="1e962f50-3d43-45a3-a661-9b453c7e50e5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plano}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="32" height="15" uuid="71213764-8043-4f33-9ba0-6d2c63a159b6"/>
+				<text><![CDATA[Plano:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="318" y="100" width="212" height="15" uuid="ee27704c-ef46-42ca-bd1d-96272e1908d8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rede}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="100" width="30" height="15" uuid="37431a02-7dfa-424d-b282-5aa3506c55bc"/>
+				<text><![CDATA[Rede:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="450" width="280" height="15" uuid="9e9d6ad9-e78f-48db-bd2a-2659789e31a1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="39" width="280" height="15" uuid="445beae2-498b-4209-be1a-6ce54f750956"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeBeneficiario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="55" width="124" height="15" uuid="19d5c15c-b174-47c3-bf86-c45a489d148f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroCarteiraTitular}]]></textFieldExpression>
+			</textField>
+			<textField pattern="M/d/yy h:mm a">
+				<reportElement x="110" y="25" width="94" height="15" uuid="fcac6be7-d5d3-475a-8525-5fcd39cb2ce1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataSolicitacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="470" width="165" height="20" uuid="a62d9f49-f441-4541-865b-09dc83168e34"/>
+				<textFieldExpression><![CDATA[$P{GAMA_SAUDE_LTDA}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="220" width="555" height="20" uuid="a9f92e26-0db2-4b2a-8e3a-c587d3af1563"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{listaItemPrevia})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PREVIA_REEMBOLSO_SUB}+"previaReembolsoSub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="448" y="8" width="100" height="16" uuid="6fafa3fc-5425-4a0e-8453-34ce112d7734"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="2" width="555" height="1" uuid="17093d54-2296-4a3e-9354-4c56f9b3ea56"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>
