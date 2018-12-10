@@ -90,13 +90,13 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
 			</textField>
-			<textField pattern="###.###.###,##">
+			<textField>
 				<reportElement x="449" y="0" width="55" height="15" uuid="ae787812-4e8d-4c5f-a331-779b4679c677">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="626a8a1d-0582-48df-8888-dc63d036fc7c"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{valorInformado}]]></textFieldExpression>
 			</textField>
-			<textField pattern="###.###.###,##">
+			<textField>
 				<reportElement x="512" y="0" width="78" height="15" uuid="43bd6c49-a10e-4340-8ad3-c4964463eb55">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba0fdad7-d9ca-4129-96cb-15ff33971cce"/>
 				</reportElement>
